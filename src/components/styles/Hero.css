@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero {
+  background-image: url("../../images/patron3.jpg");
+  background-repeat: repeat;
+  position: fixed;
+  top: 55px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__left-content {
+  display: inherit;
+  align-items: inherit;
+  justify-content: inherit;
+  flex-direction: column;
+  margin-right: 70px;
+}
+
+.hero__left-content h1 {
+  color: red;
+  text-transform: uppercase;
+}
+
+.hero__left-content p {
+  font-size: 1.2rem;
+}
+
+.hero__left-content a {
+  width: 125px;
+}
