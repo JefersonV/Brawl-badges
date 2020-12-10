@@ -1,7 +1,6 @@
 import React from 'react';
 import logoNav from '../images/logo-navbar.png';
 import './styles/Navbar.css';
-import Hero from '../components/Hero'
 class Navbar extends React.Component {
     render (){
       return(
@@ -11,7 +10,6 @@ class Navbar extends React.Component {
 							<img className="header__image" src={logoNav} alt=""/>
 						</figure>
 					</header>
-					<Hero />
 				</React.Fragment>
 			); 
     }
