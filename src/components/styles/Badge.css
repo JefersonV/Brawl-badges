@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Roboto:wght@300&display=swap");
+.badge__container {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 400px;
+  margin-top: 30%;
+  background-color: white;
+}
+
+.badge__container-brawler {
+  display: flex;
+  align-items: center;
+}
+
+.badge__name {
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  color: dodgerblue;
+  font-family: "roboto", sans-serif;
+  font-weight: bold;
+}
+
+.badge__image-container {
+  width: 150px;
+  margin-right: 2.4em;
+}
+
+.badge__label {
+  color: dodgerblue;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+
+.badge__prop {
+  font-weight: normal;
+  font-family: "Libre Baskerville", serif;
+}
+
+.badge__description-container {
+  padding-top: 15px;
+  border-top: 1px solid #ccc;
+  margin: 0 15px;
+}
+
+.badge__description p {
+  font-family: "Libre Baskerville", serif;
+}
+
+.badge__description-container h3 {
+  text-align: center;
+}
+
+.badge__label--twitter {
+  font-size: 14px;
+}
+
+.badge__label--autor {
+  font-size: 14px;
+  font-weight: normal;
+}

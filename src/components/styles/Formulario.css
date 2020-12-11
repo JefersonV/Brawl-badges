@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Roboto:wght@300&display=swap");
+
+.form {
+  background-color: white;
+  width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 40px 0;
+}
+
+.form-group label {
+  font-weight: bold;
+}
