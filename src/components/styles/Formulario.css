@@ -6,9 +6,16 @@
   border: 1px solid #ccc;
   border-radius: 20px;
   padding: 20px;
-  margin: 40px 0;
+  margin: 55px 0;
+  box-shadow: 1px 1px 7px 1px rgba(0, 0, 0, 0.29);
 }
 
 .form-group label {
   font-weight: bold;
+}
+
+.img-fluid img {
+  width: 1263px;
+  height: 205px;
+  position: absolute;
 }
