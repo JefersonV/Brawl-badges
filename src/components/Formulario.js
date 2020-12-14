@@ -3,7 +3,33 @@ import React from 'react';
 
 
 class Formulario extends React.Component {
+	state = {
+		nameBrawler: '',
+		quality: '',
+		class: '',
+		description: ''
+	};
+
+	handleChange = (e) => {
+		//console.log({ name: e.target.name,
+		//	value: e.target.value, } )
+		this.setState ({
+			[e.target.name]: e.target.value,
+		})
+	}
+
+	handleClick = (e) => {
+		console.log('button was clicked')
+	}
+
+	handleSubmit = (e) => {
+		e.preventDefault();
+		console.log('Form was submitted')
+		console.log(this.state)
+	}
+
 	render () {
+		
 			return (
 				<React.Fragment>
 				
@@ -13,19 +39,36 @@ class Formulario extends React.Component {
 								<label>
 									Nombre del Brawler
 								</label>
-								<input className="form-control" placeholder="Rayo, Polar, Laika, etc." type="text" name="" id=""/>
+								<input onChange = {this.handleChange}
+								className="form-control"
+								placeholder="Rayo, Polar, Laika, etc."
+								type="text"
+								name="nameBrawler"
+								value = { this.state.nameBrawler } />
+								
 							</div>
 							<div className="form-group">
 								<label>
 									Calidad
 								</label>
-								<input className="form-control" placeholder="Legendario, épico, común" type="text" name="" id=""/>
+								<input onChange = {this.handleChange}
+								className="form-control"
+								placeholder="Legendario, épico, común"
+								type="text" 
+								name="quality" 
+								value = {this.state.quality }/>
+								
 							</div>
 							<div className="form-group">
 								<label>
 									Clase
 								</label>
-								<input className="form-control" placeholder="Trower, apoyo, tanque" type="text" name="" id=""/>
+								<input onChange = {this.handleChange} 
+								className="form-control" 
+								placeholder="Trower, apoyo, tanque" 
+								type="text" 
+								name="class" 
+								value = {this.state.class }/>
 							</div>	
 
 							
@@ -33,16 +76,26 @@ class Formulario extends React.Component {
 								<label>
 									Descripción 
 								</label>
-								<textarea className="form-control" placeholder="Max es el brawler más rápido del universo brawl stars" name="" id="" cols="30" rows="3"></textarea>
+								<textarea onChange = {this.handleChange} 
+								className="form-control" 
+								placeholder="Max es el brawler más rápido del universo brawl stars" 
+								name="description" id="" cols="30" rows="3"
+								
+								value = {this.state.description }></textarea>
 							</div>
 							<hr/>
 							<div className="form-group">
 								<label>
 									Twitter
 								</label>
-								<input className="form-control" placeholder="@autor del brawler" type="text" name="" id=""/>
+								<input onChange = {this.handleChange}
+								className="form-control" 
+								placeholder="@autor del brawler" 
+								type="text" 
+								name="twitter" 
+								value = {this.state.twitter }/>
 							</div>
-							<button className="btn btn-primary btn-block">Guardar</button>
+							<button onClick = {this.handleClick} type="button" className="btn btn-primary btn-block">Guardar</button>
 						</form>
 					</section>
 				</React.Fragment>

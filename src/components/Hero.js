@@ -11,14 +11,14 @@ class Hero extends React.Component {
             <React.Fragment>
                 <section className="hero">
                     <article className="hero__left-content">
-                        <img src={logoBrawl} alt="logo brawl stars"/>
+                        <img src={logoBrawl} alt="logo-brawl"/>
                         <h1>Crea tu Brawler</h1>
                         <p>La manera más fácil de presentar tu idea</p>
                         <Link to = {formPage} className="btn btn-primary" >Crear</Link>
                     </article>
 
                     <article className="hero__right-content">
-                        <img src={heroImage} alt="brawler image"/>
+                        <img src={heroImage} alt="brawler-image"/>
                     </article>
                 </section>
             </React.Fragment>

@@ -21,7 +21,7 @@ class Badge extends React.Component {
 						<div className="badge__image-brawler">
 								<div className="badge__container-brawler">
 									<img className="badge__image-container" src={brawlerImage} alt="foto del brawler"/>
-								<span classNamse="badge__info">
+								<span className="badge__info">
 									<h3><span className="badge__label">Calidad <br/> </span> <span className="badge__prop"> {calidad} </span></h3>
 									<h3> <span className="badge__label"> Clase <br/></span> <span className="badge__prop"> {clase} </span></h3>
 								</span>
