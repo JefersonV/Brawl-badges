@@ -3,20 +3,20 @@ import React from 'react';
 
 
 class Formulario extends React.Component {
-	state = {
-		nameBrawler: '',
-		quality: '',
-		class: '',
-		description: ''
-	};
+	// state = {
+	// 	nameBrawler: '',
+	// 	quality: '',
+	// 	class: '',
+	// 	description: ''
+	// };
 
-	handleChange = (e) => {
-		//console.log({ name: e.target.name,
-		//	value: e.target.value, } )
-		this.setState ({
-			[e.target.name]: e.target.value,
-		})
-	}
+	// handleChange = (e) => {
+	// 	//console.log({ name: e.target.name,
+	// 	//	value: e.target.value, } )
+	// 	this.setState ({
+	// 		[e.target.name]: e.target.value,
+	// 	})
+	// }
 
 	handleClick = (e) => {
 		console.log('button was clicked')
@@ -39,36 +39,36 @@ class Formulario extends React.Component {
 								<label>
 									Nombre del Brawler
 								</label>
-								<input onChange = {this.handleChange}
+								<input onChange = {this.props.onChange}
 								className="form-control"
 								placeholder="Rayo, Polar, Laika, etc."
 								type="text"
 								name="nameBrawler"
-								value = { this.state.nameBrawler } />
+								value = { this.props.formValues.nameBrawler } />
 								
 							</div>
 							<div className="form-group">
 								<label>
 									Calidad
 								</label>
-								<input onChange = {this.handleChange}
+								<input onChange = {this.props.onChange}
 								className="form-control"
 								placeholder="Legendario, épico, común"
 								type="text" 
 								name="quality" 
-								value = {this.state.quality }/>
+								value = {this.props.formValues.quality }/>
 								
 							</div>
 							<div className="form-group">
 								<label>
 									Clase
 								</label>
-								<input onChange = {this.handleChange} 
+								<input onChange = {this.props.onChange} 
 								className="form-control" 
 								placeholder="Trower, apoyo, tanque" 
 								type="text" 
 								name="class" 
-								value = {this.state.class }/>
+								value = {this.props.formValues.class }/>
 							</div>	
 
 							
@@ -76,24 +76,24 @@ class Formulario extends React.Component {
 								<label>
 									Descripción 
 								</label>
-								<textarea onChange = {this.handleChange} 
+								<textarea onChange = {this.props.onChange} 
 								className="form-control" 
 								placeholder="Max es el brawler más rápido del universo brawl stars" 
 								name="description" id="" cols="30" rows="3"
 								
-								value = {this.state.description }></textarea>
+								value = {this.props.formValues.description }></textarea>
 							</div>
 							<hr/>
 							<div className="form-group">
 								<label>
 									Twitter
 								</label>
-								<input onChange = {this.handleChange}
+								<input onChange = {this.props.onChange}
 								className="form-control" 
 								placeholder="@autor del brawler" 
 								type="text" 
 								name="twitter" 
-								value = {this.state.twitter }/>
+								value = {this.props.formValues.twitter }/>
 							</div>
 							<button onClick = {this.handleClick} type="button" className="btn btn-primary btn-block">Guardar</button>
 						</form>

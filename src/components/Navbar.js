@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logoNav from '../images/logo-navbar.png';
 import './styles/Navbar.css';
 class Navbar extends React.Component {
@@ -6,9 +7,9 @@ class Navbar extends React.Component {
       return(
 				<React.Fragment>
 					<header className="header">
-						<figure className="header__image-container">
+						<Link to ="/" className="header__image-container">
 							<img className="header__image" src={logoNav} alt=""/>
-						</figure>
+						</Link>
 					</header>
 				</React.Fragment>
 			); 

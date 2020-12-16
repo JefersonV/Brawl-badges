@@ -14,7 +14,7 @@ class Hero extends React.Component {
                         <img src={logoBrawl} alt="logo-brawl"/>
                         <h1>Crea tu Brawler</h1>
                         <p>La manera más fácil de presentar tu idea</p>
-                        <Link to = {formPage} className="btn btn-primary" >Crear</Link>
+                        <Link to = "/badge/new" className="btn btn-primary" >Crear</Link>
                     </article>
 
                     <article className="hero__right-content">
