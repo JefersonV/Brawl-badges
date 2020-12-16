@@ -1,7 +1,6 @@
 import React from 'react';
 import Badge from '../components/Badge';
 import Formulario from '../components/Formulario';
-import Navbar from '../components/Navbar';
 import '../components/styles/Formulario.css';
 import HeroImage from '../components/HeroImage';
 class BadgeNew extends React.Component {
@@ -27,7 +26,6 @@ class BadgeNew extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <Navbar />
                 <HeroImage />
                 <div className="container">
                     <div className="row">

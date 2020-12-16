@@ -2,7 +2,6 @@ import React from 'react';
 import './styles/Hero.css'
 import logoBrawl from '../images/logo-hero.png';
 import heroImage from '../images/hero-image.png';
-import formPage from '../Pages/BadgeNew';
 import { Link } from 'react-router-dom';
 
 class Hero extends React.Component {
@@ -14,7 +13,7 @@ class Hero extends React.Component {
                         <img src={logoBrawl} alt="logo-brawl"/>
                         <h1>Crea tu Brawler</h1>
                         <p>La manera más fácil de presentar tu idea</p>
-                        <Link to = "/badge/new" className="btn btn-primary" >Crear</Link>
+                        <Link to = "/badges" className="btn btn-primary" >Iniciar</Link>
                     </article>
 
                     <article className="hero__right-content">
