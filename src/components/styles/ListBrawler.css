@@ -25,3 +25,9 @@
   width: 80px;
   height: 80px;
 }
+
+.notFound__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

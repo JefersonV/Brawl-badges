@@ -1,45 +1,39 @@
-import React from 'react';
+import React, { Component } from 'react';
 import HeroImage from '../components/HeroImage';
 import '../components/styles/BadgesList.css';
 import { Link } from 'react-router-dom';
 import ListBrawler from '../components/ListBrawler';
+import api from '../api';
 
 class BadgesList extends React.Component {
-    state = {
-        data: [
-          {
-            id: "2de30c42-9deb-40fc-a41f-05e62b5939a7",
-            nameBrawler: "Tok",
-            calidad: "Épico",
-            clase: "Trower",
-            description: "lorem ipsum lorem ist ist jasf",
-            twitter: "Degranda",
-            avatarUrl:
-              "https://www.gravatar.com/avatar/"
-          },
-          {
-            id: "d00d3614-101a-44ca-b6c2-0be075aeed3d",
-            nameBrawler: "Quetzal",
-            calidad: "Legendario",
-            clase: "Trower",
-            description: "lorem ipsum lorem ist ist jasf",
-            twitter: "YoSoyJeff",
-            avatarUrl:
-              "https://www.gravatar.com/avatar/f63a9c45aca0e7e7de0782a6b1dff40b?d=identicon"
-          },
-          {
-            id: "63c03386-33a2-4512-9ac1-354ad7bec5e97",
-            nameBrawler: "Laika",
-            calidad: "Épico",
-            clase: "Trower",
-            description: "lorem ipsum lorem ist ist jasf",
-            twitter: "Maldeadora",
-            avatarUrl:
-              "https://www.gravatar.com/avatar/f63a9c45aca0e7e7de0782a6b1dff40b?d=identicon"
-          }
-        ]
-      };
+
+      state = {
+        loading: true,
+        error: null,
+        data: undefined,
+      }; 
+
+      componentDidMount () {
+        this.fetchData();
+      }
+
+      fetchData = async () => {
+        this.setState({ loading: true, error: null })
+      
+      try {
+        const data = await api.badges.list();
+        this.setState({ loading: false, data: data });
+      } catch(error) {
+        this.setState({ loading: false, error: error })
+      }
+    };
     render() {
+      if(this.state.loading){
+        return 'Loading ...'
+      }
+      if(this.state.error){
+        return `Error: ${this.state.error.message}`
+      }
         return ( 
             <React.Fragment>
                 

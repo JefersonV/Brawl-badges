@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 import './styles/ListBrawler.css';
 
 class BadgesListItem extends React.Component {
@@ -18,7 +18,7 @@ class BadgesListItem extends React.Component {
           </strong>
           <br />@{this.props.badge.twitter}
           <br />
-          {this.props.badge.description}
+          {this.props.badge.jobTitle}
         </div>
       </div>
     );
@@ -27,9 +27,20 @@ class BadgesListItem extends React.Component {
 
 class ListBrawler extends React.Component {
   render() {
+    if (this.props.badges.length === 0) {
+      return (
+        <div className="notFound__container">
+          <h3>No se encontró ningún badge</h3>
+          <Link className="btn btn-primary" to="/badge/new">
+            Create new badge
+          </Link>
+        </div>
+      );
+    }
     return (
       <div className="BadgesList">
         <ul className="list-unstyled">
+          
           {this.props.badges.map(badge => {
             return (
               <li key={badge.id}>
