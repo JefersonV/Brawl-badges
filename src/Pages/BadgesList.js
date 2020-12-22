@@ -4,6 +4,7 @@ import '../components/styles/BadgesList.css';
 import { Link } from 'react-router-dom';
 import ListBrawler from '../components/ListBrawler';
 import api from '../api';
+import PageLoading from '../components/PageLoading';
 
 class BadgesList extends React.Component {
 
@@ -28,8 +29,8 @@ class BadgesList extends React.Component {
       }
     };
     render() {
-      if(this.state.loading){
-        return 'Loading ...'
+      if(this.state.loading === true){
+        return <PageLoading />
       }
       if(this.state.error){
         return `Error: ${this.state.error.message}`
