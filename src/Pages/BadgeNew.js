@@ -3,6 +3,7 @@ import Badge from '../components/Badge';
 import Formulario from '../components/Formulario';
 import '../components/styles/Formulario.css';
 import HeroImage from '../components/HeroImage';
+import api from '../api';
 class BadgeNew extends React.Component {
     state = {
         form: {
@@ -22,6 +23,18 @@ class BadgeNew extends React.Component {
             }
         })
     }
+
+    handleSubmit = async e => {
+        e.preventDefault()
+        this.setState({ loading: false, erorr: null})    
+
+        try {
+            await api.badges.create(this.state.form)
+            this.setState({ loading: false })
+        } catch (error) {
+            this.setState({ loading: false, erorr: error})
+        }
+}
         
     render() {
         return (
@@ -30,7 +43,7 @@ class BadgeNew extends React.Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-6">
-                            <Badge NameBrawler = {this.state.form.nameBrawler} 
+                            <Badge nameBrawler = {this.state.form.nameBrawler} 
                             quality = {this.state.form.quality }
                             class = {this.state.form.class}
                             description = {this.state.form.description}
@@ -38,6 +51,7 @@ class BadgeNew extends React.Component {
                         </div>
                         <div className="col-6">
                             <Formulario onChange = { this.handleChange } 
+                            onSubmit = { this.handleSubmit }
                             formValues = {this.state.form} />
                         </div>
                     </div>

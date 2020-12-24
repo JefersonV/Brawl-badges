@@ -22,11 +22,13 @@ class Formulario extends React.Component {
 		console.log('button was clicked')
 	}
 
-	handleSubmit = (e) => {
-		e.preventDefault();
-		console.log('Form was submitted')
-		console.log(this.state)
-	}
+	// handleSubmit = (e) => {
+	// 	e.preventDefault();
+	// 	console.log('Form was submitted')
+	// 	console.log(this.state)
+	// }
+
+
 
 	render () {
 		
@@ -34,7 +36,7 @@ class Formulario extends React.Component {
 				<React.Fragment>
 				
 					<section className="form">
-						<form action="">
+						<form onSubmit = {this.props.onSubmit}>
 							<div className="form-group">
 								<label>
 									Nombre del Brawler
@@ -95,7 +97,7 @@ class Formulario extends React.Component {
 								name="twitter" 
 								value = {this.props.formValues.twitter }/>
 							</div>
-							<button onClick = {this.handleClick} type="button" className="btn btn-primary btn-block">Guardar</button>
+							<button onClick = {this.handleClick} type="submit" className="btn btn-primary btn-block">Guardar</button>
 						</form>
 					</section>
 				</React.Fragment>
